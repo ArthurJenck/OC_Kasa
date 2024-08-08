@@ -1,0 +1,6 @@
+body {
+    padding: 2.8rem 6.25rem 0 6.25rem;
+    @media all and (max-width: 768px) {
+        padding: 1.25rem;
+    }
+}
