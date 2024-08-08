@@ -2,7 +2,7 @@
 
 ## Créez une application web de location immobilière avec React
 
-Rendu du projet n°5 de la formation Développeur Web d'OpenClassrooms : Créez une application web de location immobilière avec React
+Rendu du projet n°5 de la formation Développeur Web d'OpenClassrooms : Créez une application web de location immobilière avec React.
 
 ### Aperçu hébergé
 
