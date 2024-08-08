@@ -7,16 +7,12 @@ Rendu du projet n°5 de la formation Développeur Web d'OpenClassrooms : Créez 
 ### Aperçu hébergé
 
 Hébergement sur GitHub Pages :  
-https://arthurjenck.github.io/OC_NinaCarducci/
-
-Projet initial, avant modification :  
-https://openclassrooms-student-center.github.io/Nina-Carducci-Dev/
+https://arthurjenck.github.io/OC_Kasa/
 
 ### Dates du projet
 
-Apprentissage des cours liés au projet débuté le 29 mai 2024  
-Projet pratique débuté le 17 juin 2024  
-Projet terminé le 26 juillet 2024
+Apprentissage des cours liés au projet débuté le 18 juillet 2024  
+Projet pratique débuté le 8 août 2024
 
 ### Auteur
 
