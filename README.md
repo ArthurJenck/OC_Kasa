@@ -1,50 +1,27 @@
-# React + TypeScript + Vite
+# OpenClassrooms Projet 5
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Créez une application web de location immobilière avec React
 
-Currently, two official plugins are available:
+Rendu du projet n°5 de la formation Développeur Web d'OpenClassrooms : Créez une application web de location immobilière avec React
 
--   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
--   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Aperçu hébergé
 
-## Expanding the ESLint configuration
+Hébergement sur GitHub Pages :  
+https://arthurjenck.github.io/OC_NinaCarducci/
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Projet initial, avant modification :  
+https://openclassrooms-student-center.github.io/Nina-Carducci-Dev/
 
--   Configure the top-level `parserOptions` property like this:
+### Dates du projet
 
-```js
-export default tseslint.config({
-    languageOptions: {
-        // other options...
-        parserOptions: {
-            project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-            tsconfigRootDir: import.meta.dirname,
-        },
-    },
-});
-```
+Apprentissage des cours liés au projet débuté le 29 mai 2024  
+Projet pratique débuté le 17 juin 2024  
+Projet terminé le 26 juillet 2024
 
--   Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
--   Optionally add `...tseslint.configs.stylisticTypeChecked`
--   Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Auteur
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
+Arthur Jenck  
+https://arthurjenck.com/  
+https://www.linkedin.com/in/arthurjenck/
 
-export default tseslint.config({
-    // Set the react version
-    settings: { react: { version: "18.3" } },
-    plugins: {
-        // Add the react plugin
-        react,
-    },
-    rules: {
-        // other rules...
-        // Enable its recommended rules
-        ...react.configs.recommended.rules,
-        ...react.configs["jsx-runtime"].rules,
-    },
-});
-```
+<img src="https://i.ibb.co/grKRmmn/Logo-Jaune-PNG.png" width="75">
