@@ -1,6 +1,8 @@
-import Banner from "../components/Banner"
 import { useEffect } from "react"
 import "../styles/Home.scss"
+import Header from "../components/Header"
+import Banner from "../components/Banner"
+import CardWrapper from "../components/CardWrapper"
 
 function Home() {
     useEffect(() => {
@@ -8,7 +10,9 @@ function Home() {
     }, [])
     return (
         <>
+            <Header />
             <Banner />
+            <CardWrapper />
         </>
     )
 }

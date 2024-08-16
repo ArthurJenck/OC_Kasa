@@ -1,4 +1,4 @@
-import Banner from "../components/Banner"
+import Banner from "../components/Header"
 
 const About = () => {
     return (
