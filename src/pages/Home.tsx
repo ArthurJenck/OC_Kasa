@@ -12,7 +12,7 @@ function Home() {
     return (
         <>
             <Header />
-            <Banner />
+            <Banner isHomeBanner bg="/src/assets/home_banner_bg.jpg" />
             <CardWrapper />
             <Footer />
         </>
