@@ -1,0 +1,22 @@
+footer {
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img {
+        width: 7.6rem;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+            saturate(7500%) hue-rotate(70deg) brightness(99%) contrast(107%);
+        margin-top: 4rem;
+    }
+    p {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 2rem 0;
+    }
+}

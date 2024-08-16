@@ -2,9 +2,11 @@ import "../styles/Banner.scss"
 
 const Banner = () => {
     return (
-        <p className="banner">
-            <span>Chez vous,&nbsp;</span>partout et ailleurs
-        </p>
+        <div className="banner">
+            <h2>
+                <span>Chez vous,&nbsp;</span>partout et ailleurs
+            </h2>
+        </div>
     )
 }
 

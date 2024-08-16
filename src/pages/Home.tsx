@@ -3,6 +3,7 @@ import "../styles/Home.scss"
 import Header from "../components/Header"
 import Banner from "../components/Banner"
 import CardWrapper from "../components/CardWrapper"
+import Footer from "../components/Footer"
 
 function Home() {
     useEffect(() => {
@@ -13,6 +14,7 @@ function Home() {
             <Header />
             <Banner />
             <CardWrapper />
+            <Footer />
         </>
     )
 }
