@@ -1,5 +1,7 @@
+@import "./main.scss";
+
 footer {
-    background-color: #000;
+    background-color: $black;
     position: absolute;
     left: 0;
     width: 100%;
@@ -7,7 +9,6 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 3.1rem;
     img {
         width: 7.6rem;
         filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
@@ -21,7 +22,6 @@ footer {
         margin: 2rem 0;
     }
     @media all and (max-width: 768px) {
-        margin-top: 1.7rem;
         p {
             font-size: 12px;
             max-width: 33%;

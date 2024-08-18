@@ -1,8 +1,7 @@
 import { useEffect } from "react"
-import Header from "../components/Header"
+import "../styles/About.scss"
 import Banner from "../components/Banner"
 import Dropdown from "../components/Dropdown"
-import Footer from "../components/Footer"
 
 const aboutDropdowns = [
     {
@@ -32,8 +31,7 @@ const About = () => {
         document.title = "À propos de Kasa"
     }, [])
     return (
-        <>
-            <Header />
+        <main className="about">
             <Banner bg="/src/assets/about_banner_bg.jpg" />
             {aboutDropdowns.map((dropdown, index) => {
                 return (
@@ -43,8 +41,7 @@ const About = () => {
                     />
                 )
             })}
-            <Footer />
-        </>
+        </main>
     )
 }
 

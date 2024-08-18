@@ -1,3 +1,5 @@
+@import "./main.scss";
+
 .dropdown {
     background-color: rgba(246, 246, 246, 0.45);
     width: 82%;
@@ -5,7 +7,7 @@
     .dropdown-button {
         width: 100%;
         border: 0;
-        background-color: #ff6060;
+        background-color: $accent;
         text-align: start;
         font-size: 18px;
         font-weight: 700;
@@ -16,6 +18,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
         img {
             width: 1.5rem;
             transform: rotate(180deg);
@@ -23,7 +26,7 @@
         }
     }
     .dropdown-content {
-        padding: 0 1.25rem 0 1.25rem;
+        padding: 0 1.25rem;
         display: grid;
         grid-template-rows: 0fr;
         transition: ease-in-out 0.2s grid-template-rows,
@@ -44,6 +47,24 @@
         }
         .dropdown-button img {
             transform: rotate(0deg);
+        }
+    }
+    @media all and (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 1.25rem;
+        .dropdown-button {
+            font-size: 13px;
+            padding: 0.6rem;
+        }
+        .dropdown-content {
+            p {
+                font-size: 12px;
+            }
+        }
+        &.open {
+            .dropdown-content {
+                padding: 0.8rem 1.25rem;
+            }
         }
     }
 }

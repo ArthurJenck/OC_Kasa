@@ -8,6 +8,7 @@ const CardWrapper = () => {
             {Array.from(logements).map((logement) => (
                 <Card
                     key={logement.id}
+                    id={logement.id}
                     name={logement.title}
                     cover={logement.pictures[0]}
                 />

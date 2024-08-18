@@ -1,0 +1,8 @@
+@import "./main.scss";
+
+.about {
+    margin: $header-footer-margin 0;
+    @media all and (max-width: 768px) {
+        margin: $header-footer-margin-mobile 0;
+    }
+}

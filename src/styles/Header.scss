@@ -1,11 +1,16 @@
+@import "./main.scss";
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3.1rem;
-    img {
-        user-select: none;
+    h1 {
+        margin: 0;
+        img {
+            user-select: none;
+        }
     }
+
     nav {
         display: flex;
         align-items: center;
@@ -13,7 +18,7 @@ header {
         gap: 3.5rem;
         a {
             font-weight: 500;
-            color: #000;
+            color: $black;
             font-size: 1.5rem;
             text-decoration: none;
             &.active {
@@ -22,7 +27,6 @@ header {
         }
     }
     @media all and (max-width: 768px) {
-        margin-bottom: 1.7rem;
         img {
             max-width: 9rem;
         }

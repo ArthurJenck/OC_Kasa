@@ -1,0 +1,42 @@
+@import "./main.scss";
+
+.error-404 {
+    text-align: center;
+    padding: $error-gap 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: $error-gap;
+    h2 {
+        margin: 0;
+        font-weight: 700;
+        font-size: 288px;
+        color: $accent;
+    }
+    p {
+        font-weight: 500;
+        font-size: 36px;
+        color: $accent;
+    }
+    a {
+        font-weight: 500;
+        font-size: 18px;
+        color: $black;
+    }
+    @media all and (max-width: 768px) {
+        padding: $error-gap-mobile 0;
+        gap: $error-gap-mobile;
+        h2 {
+            font-size: 96px;
+        }
+        p {
+            font-size: 18px;
+            span {
+                display: block;
+            }
+        }
+        a {
+            font-size: 14px;
+        }
+    }
+}
