@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import "../styles/Lodging.scss"
 import SlideShow from "../components/SlideShow"
 import Tag from "../components/Tag"
@@ -23,12 +22,7 @@ interface LodgingProps {
 }
 
 const Lodging = ({ logement }: LodgingProps) => {
-    useEffect(() => {
-        document.title = `${logement.title} - ${logement.location}`
-    })
-
-    console.log(logement)
-
+    document.title = `${logement.title} - ${logement.location}`
     return (
         <main className="lodging">
             <SlideShow logement={logement} />

@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import "../styles/About.scss"
 import Banner from "../components/Banner"
 import Dropdown from "../components/Dropdown"
@@ -27,9 +26,7 @@ const aboutDropdowns = [
 ]
 
 const About = () => {
-    useEffect(() => {
-        document.title = "À propos de Kasa"
-    }, [])
+    document.title = "À propos de Kasa"
     return (
         <main className="about">
             <Banner bg="/src/assets/about_banner_bg.jpg" />
