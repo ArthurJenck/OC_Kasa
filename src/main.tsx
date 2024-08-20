@@ -1,6 +1,6 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import "./styles/main.scss"
 import Header from "./components/Header.tsx"
 import Home from "./pages/Home.tsx"
@@ -17,7 +17,8 @@ createRoot(document.getElementById("root")!).render(
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="*" element={<Error />} />
+                <Route path="/404" element={<Error />} />
+                <Route path="*" element={<Navigate replace to="/404" />} />
                 {Array.from(logements).map((logement) => {
                     return (
                         <Route
