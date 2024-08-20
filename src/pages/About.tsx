@@ -29,7 +29,7 @@ const About = () => {
     document.title = "À propos de Kasa"
     return (
         <main className="about">
-            <Banner bg="/src/assets/about_banner_bg.jpg" />
+            <Banner />
             {aboutDropdowns.map((dropdown, index) => {
                 return (
                     <Dropdown
