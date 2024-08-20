@@ -37,7 +37,8 @@ const About = () => {
                 return (
                     <Dropdown
                         key={`about-dropdown-${index}`}
-                        content={dropdown}
+                        title={dropdown.title}
+                        textContent={dropdown.textContent}
                     />
                 )
             })}

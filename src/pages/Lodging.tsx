@@ -1,9 +1,25 @@
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import "../styles/Lodging.scss"
-import ImgChevron from "../assets/lodging_img_chevron.svg"
+import SlideShow from "../components/SlideShow"
+import Tag from "../components/Tag"
+import Host from "../components/Host"
+import Ratings from "../components/Rating"
+import Dropdown from "../components/Dropdown"
 
 interface LodgingProps {
-    logement: { title: string; location: string; pictures: string[] }
+    logement: {
+        description: string
+        equipments: string[]
+        host: {
+            name: string
+            picture: string
+        }
+        location: string
+        pictures: string[]
+        rating: string
+        tags: string[]
+        title: string
+    }
 }
 
 const Lodging = ({ logement }: LodgingProps) => {
@@ -11,50 +27,28 @@ const Lodging = ({ logement }: LodgingProps) => {
         document.title = `${logement.title} - ${logement.location}`
     })
 
-    const [currentId, setCurrentId] = useState(0)
-
-    const prevImg = () => {
-        return currentId === 0
-            ? setCurrentId(logement.pictures.length - 1)
-            : setCurrentId(currentId - 1)
-    }
-
-    const nextImg = () => {
-        return currentId === logement.pictures.length - 1
-            ? setCurrentId(0)
-            : setCurrentId(currentId + 1)
-    }
+    console.log(logement)
 
     return (
         <main className="lodging">
-            <div className="cover-container">
-                <img
-                    src={logement.pictures[currentId]}
-                    alt="image du logement"
-                />
-                {logement.pictures.length > 1 ? (
-                    <>
-                        <img
-                            src={ImgChevron}
-                            alt="image précédente"
-                            className="cover-btn prev-btn"
-                            onClick={() => prevImg()}
-                        />
-                        <img
-                            src={ImgChevron}
-                            alt="image suivante"
-                            className="cover-btn next-btn"
-                            onClick={() => nextImg()}
-                        />
-                        <p className="cover-num">
-                            {currentId + 1}/{logement.pictures.length}
-                        </p>
-                    </>
-                ) : (
-                    ""
-                )}
+            <SlideShow logement={logement} />
+            <div className="location-and-tags">
+                <h2>{logement.title}</h2>
+                <p className="location"></p>
+                {logement.tags.map((tag, index) => {
+                    return <Tag key={`tag-${index}`} tagname={tag} />
+                })}
             </div>
-            <h2>{logement.title}</h2>
+            <div className="host-and-rating">
+                <Host host={logement.host} />
+                <Ratings rating={logement.rating} />
+            </div>
+            <Dropdown title="Description" textContent={logement.description} />
+            <Dropdown
+                title="Équipements"
+                isList
+                listContent={logement.equipments}
+            />
         </main>
     )
 }

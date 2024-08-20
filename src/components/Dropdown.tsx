@@ -3,10 +3,18 @@ import chevron from "../assets/chevron.svg"
 import { useState } from "react"
 
 interface DropdownProps {
-    content: { title: string; isList?: boolean; textContent?: string }
+    title: string
+    isList?: boolean
+    textContent?: string
+    listContent?: string[]
 }
 
-const Dropdown = ({ content }: DropdownProps) => {
+const Dropdown = ({
+    title,
+    isList,
+    textContent,
+    listContent,
+}: DropdownProps) => {
     const [isOpen, setIsOpen] = useState(false)
     const isOpenClass = isOpen ? " open" : ""
 
@@ -18,10 +26,18 @@ const Dropdown = ({ content }: DropdownProps) => {
                     setIsOpen(!isOpen)
                 }}
             >
-                {content.title} <img src={chevron} />
+                {title} <img src={chevron} />
             </button>
             <div className="dropdown-content">
-                {content.isList ? null : <p>{content.textContent}</p>}
+                {isList ? (
+                    <ul>
+                        {listContent?.map((listElem) => (
+                            <li key={listElem}>{listElem}</li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p>{textContent}</p>
+                )}
             </div>
         </div>
     )

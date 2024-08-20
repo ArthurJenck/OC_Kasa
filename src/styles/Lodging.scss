@@ -2,7 +2,7 @@
 
 .lodging {
     margin: $header-footer-margin 0;
-    .cover-container {
+    .slide-show {
         position: relative;
         overflow: hidden;
         img {
@@ -48,7 +48,7 @@
     }
     @media all and (max-width: 768px) {
         margin: $header-footer-margin-mobile 0;
-        .cover-container {
+        .slide-show {
             img {
                 height: 15.9rem;
                 border-radius: 10px;

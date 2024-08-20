@@ -31,7 +31,8 @@
         grid-template-rows: 0fr;
         transition: ease-in-out 0.2s grid-template-rows,
             ease-in-out 0.2s padding;
-        p {
+        p,
+        ul {
             margin: 0;
             font-size: 18px;
             overflow: hidden;
@@ -57,7 +58,8 @@
             padding: 0.6rem;
         }
         .dropdown-content {
-            p {
+            p,
+            ul {
                 font-size: 12px;
             }
         }
