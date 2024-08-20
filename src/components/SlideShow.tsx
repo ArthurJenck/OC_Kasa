@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "../styles/SlideShow.scss"
 import ImgChevron from "../assets/lodging_img_chevron.svg"
 
 interface LodgingProps {

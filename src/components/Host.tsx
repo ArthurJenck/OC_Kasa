@@ -1,3 +1,5 @@
+import "../styles/Host.scss"
+
 interface HostProps {
     host: {
         name: string
@@ -8,7 +10,11 @@ interface HostProps {
 const Host = ({ host }: HostProps) => {
     return (
         <div className="host">
-            <p className="host-name">{host.name}</p>
+            <p>
+                {host.name.split(" ").map((word) => {
+                    return <span key={word}>{word}</span>
+                })}
+            </p>
             <img src={host.picture} alt="photo de profil de l'hôte" />
         </div>
     )

@@ -1,0 +1,23 @@
+@import "./main.scss";
+
+.host {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    p {
+        font-weight: 500;
+        font-size: 18px;
+        color: $accent;
+        text-align: right;
+        line-height: 25.7px;
+        margin: 0;
+        span {
+            display: block;
+        }
+    }
+    img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+    }
+}

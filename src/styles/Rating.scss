@@ -1,6 +1,12 @@
 .rating-container {
+    display: flex;
+    gap: 9px;
     .active-rating {
         filter: brightness(0) saturate(100%) invert(75%) sepia(80%)
             saturate(5046%) hue-rotate(322deg) brightness(100%) contrast(111%);
+    }
+    @media all and (max-width: 768px) {
+        width: 13px;
+        height: 13px;
     }
 }

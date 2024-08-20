@@ -1,0 +1,62 @@
+@import "./main.scss";
+
+.slide-show {
+    position: relative;
+    overflow: hidden;
+    height: 25.9rem;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 25px;
+    }
+    .cover-btn {
+        width: 47px;
+        height: 79px;
+        border-radius: 0;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-right: 1.44rem;
+        cursor: pointer;
+        &.prev-btn {
+            left: 0;
+            transform: rotate(180deg) translateY(50%);
+        }
+    }
+    .cover-num {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        padding-bottom: 1.6rem;
+        margin: 0;
+    }
+    .carousel-img {
+        position: absolute;
+        top: 0;
+        &.prev-img {
+            left: -100%;
+        }
+        &.next-img {
+            right: -100%;
+        }
+    }
+    @media all and (max-width: 768px) {
+        height: 15.9rem;
+        img {
+            border-radius: 10px;
+        }
+        .cover-btn {
+            width: 12px;
+            height: 20px;
+            padding-right: 6px;
+        }
+        .cover-num {
+            display: none;
+        }
+    }
+}

@@ -28,21 +28,28 @@ const Lodging = ({ logement }: LodgingProps) => {
             <SlideShow logement={logement} />
             <div className="location-and-tags">
                 <h2>{logement.title}</h2>
-                <p className="location"></p>
-                {logement.tags.map((tag, index) => {
-                    return <Tag key={`tag-${index}`} tagname={tag} />
-                })}
+                <p>{logement.location}</p>
+                <div className="tags-container">
+                    {logement.tags.map((tag, index) => {
+                        return <Tag key={`tag-${index}`} tagname={tag} />
+                    })}
+                </div>
             </div>
             <div className="host-and-rating">
                 <Host host={logement.host} />
                 <Ratings rating={logement.rating} />
             </div>
-            <Dropdown title="Description" textContent={logement.description} />
-            <Dropdown
-                title="Équipements"
-                isList
-                listContent={logement.equipments}
-            />
+            <div className="dropdowns">
+                <Dropdown
+                    title="Description"
+                    textContent={logement.description}
+                />
+                <Dropdown
+                    title="Équipements"
+                    isList
+                    listContent={logement.equipments}
+                />
+            </div>
         </main>
     )
 }
