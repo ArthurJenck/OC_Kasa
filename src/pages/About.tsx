@@ -2,6 +2,7 @@ import "../styles/About.scss"
 import Banner from "../components/Banner"
 import Dropdown from "../components/Dropdown"
 
+// Le contenu des composants Dropdowns de la page About sont rédigés dans cet array. On remarque que deux sont similaires, peut-être une erreur de maquette ?
 const aboutDropdowns = [
     {
         title: "Fiabilité",

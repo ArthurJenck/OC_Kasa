@@ -13,6 +13,7 @@ const Header = () => {
             <nav>
                 <NavLink
                     to="/"
+                    // Les props Navlink ont automatiquement une propriété isActive, on peut s'en servir pour ajouter une class active à la page actuellement sélectionnée
                     className={(props) => (props.isActive ? "active" : "")}
                 >
                     Accueil

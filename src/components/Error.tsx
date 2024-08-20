@@ -1,11 +1,8 @@
-import { useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import "../styles/Error.scss"
 
 const Error = () => {
-    useEffect(() => {
-        document.title = "Erreur 404"
-    }, [])
+    document.title = "Erreur 404"
     return (
         <section className="error-404">
             <h2>404</h2>

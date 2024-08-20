@@ -15,12 +15,16 @@ const Dropdown = ({
     textContent,
     listContent,
 }: DropdownProps) => {
+    // Le useState vérifie si l'élément déroulant est ouvert ou fermé
     const [isOpen, setIsOpen] = useState(false)
+    // S'il est ouvert, une class "open" est ajoutée à l'élément
     const isOpenClass = isOpen ? " open" : ""
 
     return (
+        // La class est ajoutée ici
         <div className={`dropdown${isOpenClass}`}>
             <button
+                // Quand on clique sur le bouton d'ouverture/fermeture, l'état du composant change et toggle la class open par la même occasion
                 className="dropdown-button"
                 onClick={() => {
                     setIsOpen(!isOpen)
@@ -31,6 +35,7 @@ const Dropdown = ({
             <div className="dropdown-content">
                 {isList ? (
                     <ul>
+                        {/* Si le contenu de l'élement a été défini comme une liste, on crée une liste non-ordonnée avec chaque élément (utile pour les pages de propriété avec les équipements) */}
                         {listContent?.map((listElem) => (
                             <li key={listElem}>{listElem}</li>
                         ))}

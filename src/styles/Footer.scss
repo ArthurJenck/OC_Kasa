@@ -11,6 +11,7 @@ footer {
     flex-direction: column;
     img {
         width: 7.6rem;
+        // On peut utiliser la propriété filter pour changer la couleur d'un fichier SVG sans en télécharger un nouveau
         filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
             saturate(7500%) hue-rotate(70deg) brightness(99%) contrast(107%);
         margin-top: 4rem;

@@ -24,6 +24,7 @@
     .dropdown-content {
         padding: 0 1.25rem;
         display: grid;
+        // En supprimant le nombre de rows dans la grid, on masque directement l'élément
         grid-template-rows: 0fr;
         transition: ease-in-out 0.2s grid-template-rows,
             ease-in-out 0.2s padding;
@@ -44,10 +45,12 @@
     &.open {
         background-color: rgba(246, 246, 246, 0.45);
         .dropdown-content {
-            padding: 1.6rem 1.25rem 1.25rem 1.25rem;
+            // Une fois avec la classe .open, on rajoute le row sur la grid pour afficher le contenu
             grid-template-rows: 1fr;
+            padding: 1.6rem 1.25rem 1.25rem 1.25rem;
         }
         .dropdown-button img {
+            // Et on retourne le chevron
             transform: rotate(180deg);
         }
     }
@@ -62,10 +65,8 @@
                 font-size: 12px;
             }
         }
-        &.open {
-            .dropdown-content {
-                padding: 0.8rem 1.25rem;
-            }
+        &.open.dropdown-content {
+            padding: 0.8rem 1.25rem;
         }
     }
 }

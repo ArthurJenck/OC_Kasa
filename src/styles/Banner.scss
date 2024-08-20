@@ -1,6 +1,7 @@
 @import "./main.scss";
 
 .banner {
+    // On peut cumuler les dégradés sombres et l'image directement, pour éviter de faire une div calque inutile
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
         url("../assets/about_banner_bg.jpg");
     width: 100%;
@@ -15,6 +16,7 @@
     align-items: center;
     justify-content: center;
     &.home-banner {
+        // L'image sera différente si la bannière est sur la homepage
         background-image: linear-gradient(
                 rgba(0, 0, 0, 0.6),
                 rgba(0, 0, 0, 0.6)
@@ -25,6 +27,7 @@
         color: #fff;
         font-size: 3rem;
         font-weight: 700;
+        // Il y a un très léger outline sur le texte dans la maquette
         text-shadow: -1px -1px 0 $black, 1px -1px 0 $black, 1px 1px 0 $black,
             1px 1px 0 $black;
     }

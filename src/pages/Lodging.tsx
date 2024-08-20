@@ -30,6 +30,7 @@ const Lodging = ({ logement }: LodgingProps) => {
                 <h2>{logement.title}</h2>
                 <p>{logement.location}</p>
                 <div className="tags-container">
+                    {/* Le map nous permet d'avoir autant de Tag qu'il y en a sur l'élément */}
                     {logement.tags.map((tag, index) => {
                         return <Tag key={`tag-${index}`} tagname={tag} />
                     })}
@@ -44,6 +45,7 @@ const Lodging = ({ logement }: LodgingProps) => {
                     title="Description"
                     textContent={logement.description}
                 />
+                {/* On précise que ce Dropdown sera une liste, pour modifier la génération de l'élément */}
                 <Dropdown
                     title="Équipements"
                     isList

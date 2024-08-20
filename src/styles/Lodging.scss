@@ -3,6 +3,7 @@
 .lodging {
     margin: $header-footer-margin 0;
     display: grid;
+    // Le placement des éléments étant relativement complexe sur cette page, la grid rend son traitement plus simple
     grid-template: max-content / 80% 20%;
     .slide-show {
         grid-column: span 2;
@@ -83,9 +84,9 @@
                 margin-top: 0;
             }
         }
-    }
-    .dropdowns {
-        flex-direction: column;
-        gap: 1.25rem;
+        .dropdowns {
+            flex-direction: column;
+            gap: 1.25rem;
+        }
     }
 }
