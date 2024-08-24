@@ -11,6 +11,7 @@ https://arthurjenck.github.io/OC_Kasa/
 
 ### Challenges Personnels
 
+Apprentissage de TypeScript et application du typage strict sur le projet. Une branch en JavaScript uniquement est accessible également sur no-ts, pour coller aux demandes originales du projet.  
 Hébergement sur GitHub Pages malgré le manque de compatibilité avec React Router.  
 Animation du Carrousel d'images avec glissade sur le côté.  
 Utilisation de variables SCSS pour faciliter un changement de charte graphique par la suite.
