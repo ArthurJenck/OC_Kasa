@@ -1,0 +1,20 @@
+@import "../styles/main.scss";
+
+.location-tag {
+    width: 7.2rem;
+    white-space: nowrap;
+    background-color: $accent;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    line-height: 19px;
+    padding: 3px 0;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+    @media all and (max-width: 768px) {
+        max-width: 5.25rem;
+        font-size: 10px;
+    }
+}

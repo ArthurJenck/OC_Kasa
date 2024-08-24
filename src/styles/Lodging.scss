@@ -1,0 +1,92 @@
+@import "./main.scss";
+
+.lodging {
+    margin: $header-footer-margin 0;
+    display: grid;
+    // Le placement des éléments étant relativement complexe sur cette page, la grid rend son traitement plus simple
+    grid-template: max-content / 80% 20%;
+    .slide-show {
+        grid-column: span 2;
+    }
+    .location-and-tags {
+        grid-column: 1;
+        margin: 1.87rem 0 1.5rem 0;
+        h2 {
+            font-weight: 500;
+            font-size: 36px;
+            color: $accent;
+            max-width: 90%;
+            margin: 0;
+            & + p {
+                font-weight: 500;
+                font-size: 18px;
+                margin: 0;
+            }
+        }
+        .tags-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 1.25rem;
+        }
+    }
+    .host-and-rating {
+        grid-column: 2;
+        margin: 1.5rem 0 2.31rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .rating-container {
+            box-sizing: border-box;
+            margin-top: 1.7rem;
+        }
+    }
+    .dropdowns {
+        display: flex;
+        grid-column: span 2;
+        gap: 4.75rem;
+        .dropdown {
+            flex: 1;
+        }
+    }
+    @media all and (max-width: 768px) {
+        margin: $header-footer-margin-mobile 0;
+        .location-and-tags {
+            margin: 1rem 0;
+            grid-column: span 2;
+            h2 {
+                font-size: 18px;
+                & + p {
+                    margin-top: 5px;
+                    font-size: 14px;
+                }
+            }
+            .tags-container {
+                margin-top: 10px;
+            }
+        }
+        .host-and-rating {
+            margin: 0 0 0.8rem 0;
+            grid-column: span 2;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            .host {
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                }
+                p {
+                    font-size: 12px;
+                    line-height: 1rem;
+                }
+            }
+            .rating-container {
+                margin-top: 0;
+            }
+        }
+        .dropdowns {
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+    }
+}

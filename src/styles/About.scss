@@ -1,0 +1,16 @@
+@import "./main.scss";
+
+.about {
+    margin: $header-footer-margin 0;
+    .dropdown {
+        width: 82%;
+        margin: 0 auto 1.9rem auto;
+    }
+    @media all and (max-width: 768px) {
+        margin: $header-footer-margin-mobile 0;
+        .dropdown {
+            width: 100%;
+            margin-bottom: 1.25rem;
+        }
+    }
+}

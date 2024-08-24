@@ -1,0 +1,42 @@
+@import "./main.scss";
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        margin: 0;
+        img {
+            user-select: none;
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3.5rem;
+        a {
+            font-weight: 500;
+            color: $black;
+            font-size: 1.5rem;
+            text-decoration: none;
+            &.active {
+                text-decoration: underline;
+            }
+        }
+    }
+    @media all and (max-width: 768px) {
+        img {
+            max-width: 9rem;
+        }
+        nav {
+            gap: 1.6rem;
+            a {
+                font-size: 12px;
+                // On remarque sur la maquette que les éléments de la nav sont en majuscule avec le responsive
+                text-transform: uppercase;
+            }
+        }
+    }
+}

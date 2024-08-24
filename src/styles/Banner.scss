@@ -1,0 +1,48 @@
+@import "./main.scss";
+
+.banner {
+    // On peut cumuler les dégradés sombres et l'image directement, pour éviter de faire une div calque inutile
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../assets/about_banner_bg.jpg");
+    width: 100%;
+    aspect-ratio: 5.5;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 2.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.home-banner {
+        // L'image sera différente si la bannière est sur la homepage
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.6),
+                rgba(0, 0, 0, 0.6)
+            ),
+            url("../assets/home_banner_bg.jpg");
+    }
+    h2 {
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 700;
+        // Il y a un très léger outline sur le texte dans la maquette
+        text-shadow: -1px -1px 0 $black, 1px -1px 0 $black, 1px 1px 0 $black,
+            1px 1px 0 $black;
+    }
+    @media all and (max-width: 768px) {
+        height: 7rem;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 10px;
+        margin-bottom: 1.4rem;
+        h2 {
+            font-size: 1.5rem;
+            text-shadow: none;
+        }
+        span {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.card {
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    padding: 1.25rem;
+    display: flex;
+    align-items: flex-end;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    text-decoration: none;
+    h2 {
+        margin: 0;
+        font-weight: 700;
+        font-size: 18px;
+        color: #fff;
+    }
+    @media all and (max-width: 930px) {
+        aspect-ratio: 1.5;
+        padding: 0.95rem 1.24rem;
+        h2 {
+            max-width: 60%;
+        }
+    }
+}
