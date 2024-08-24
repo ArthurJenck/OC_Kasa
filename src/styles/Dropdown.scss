@@ -10,7 +10,7 @@
         font-weight: 700;
         color: #fff;
         padding: 1.25rem 1.5rem 1.25rem 1rem;
-        border-radius: 5px;
+        border-radius: 10px;
         margin: 0;
         display: flex;
         justify-content: space-between;
@@ -58,6 +58,7 @@
         .dropdown-button {
             font-size: 13px;
             padding: 0.6rem;
+            border-radius: 5px;
         }
         .dropdown-content {
             p,

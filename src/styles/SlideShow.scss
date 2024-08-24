@@ -3,7 +3,7 @@
 .slide-show {
     position: relative;
     .pic-viewer {
-        height: 25.9rem;
+        aspect-ratio: 3;
         display: flex;
         overflow-x: hidden;
         // Le scroll-snap permet un filet de sauvetage si les valeurs de scroll sont légèrement incorrectes
@@ -60,9 +60,6 @@
     @media all and (max-width: 768px) {
         .pic-viewer {
             height: 15.9rem;
-        }
-        img {
-            border-radius: 10px;
         }
         .cover-btn {
             width: 12px;
