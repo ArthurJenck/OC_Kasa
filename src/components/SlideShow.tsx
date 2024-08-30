@@ -58,7 +58,13 @@ const SlideShow = ({ logement }: LodgingProps) => {
             <div className="pic-viewer">
                 {/* Toutes les images de l'array sont déjà affichées, puis cachées en overflow hidden */}
                 {logement.pictures.map((picture, index) => {
-                    return <img key={`picture-${index}`} src={picture} />
+                    return (
+                        <img
+                            key={`picture-${index}`}
+                            src={picture}
+                            alt={`${logement.title} - image ${index + 1}`}
+                        />
+                    )
                 })}
             </div>
             {/* S'il y a plusieurs images dans l'array picture, on affiche les boutons de slide */}

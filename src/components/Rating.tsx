@@ -22,10 +22,15 @@ const Ratings = ({ rating }: { rating: string }) => {
                         src={starIcon}
                         key={`star-${index}`}
                         className="active-rating"
+                        alt="étoile colorée"
                     />
                 ) : (
                     // Sinon, c'est une simple étoile grise
-                    <img src={starIcon} key={`star-${index}`} />
+                    <img
+                        src={starIcon}
+                        key={`star-${index}`}
+                        alt="étoile vide"
+                    />
                 )
             )}
         </div>
