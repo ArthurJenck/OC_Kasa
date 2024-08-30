@@ -1,4 +1,4 @@
-@import "../styles/main.scss";
+@import "./main.scss";
 
 .location-tag {
     width: 7.2rem;
@@ -13,7 +13,7 @@
     box-sizing: border-box;
     text-align: center;
     margin: 0;
-    @media all and (max-width: 768px) {
+    @media all and (max-width: $responsive-breakpoint) {
         max-width: 5.25rem;
         font-size: 10px;
     }

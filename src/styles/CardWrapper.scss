@@ -9,7 +9,8 @@
     grid-template: auto / repeat(3, 1fr);
     gap: 3.1rem 3.75rem;
     margin-bottom: $header-footer-margin;
-    @media all and (max-width: 930px) {
+
+    @media all and (max-width: $responsive-breakpoint-home) {
         grid-template: auto / 1fr;
         padding: 0;
         gap: 1.25rem;

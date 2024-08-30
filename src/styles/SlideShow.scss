@@ -57,9 +57,9 @@
             right: -100%;
         }
     }
-    @media all and (max-width: 768px) {
+    @media all and (max-width: $responsive-breakpoint) {
         .pic-viewer {
-            height: 15.9rem;
+            aspect-ratio: 1.3;
         }
         .cover-btn {
             width: 12px;

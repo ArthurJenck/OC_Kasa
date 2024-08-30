@@ -54,7 +54,7 @@
             transform: rotate(180deg);
         }
     }
-    @media all and (max-width: 768px) {
+    @media all and (max-width: $responsive-breakpoint) {
         .dropdown-button {
             font-size: 13px;
             padding: 0.6rem;

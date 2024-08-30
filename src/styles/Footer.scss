@@ -22,7 +22,7 @@ footer {
         font-weight: 500;
         margin: 2rem 0;
     }
-    @media all and (max-width: 768px) {
+    @media all and (max-width: $responsive-breakpoint) {
         p {
             font-size: 12px;
             max-width: 33%;

@@ -6,7 +6,7 @@
         width: 82%;
         margin: 0 auto 1.9rem auto;
     }
-    @media all and (max-width: 768px) {
+    @media all and (max-width: $responsive-breakpoint) {
         margin: $header-footer-margin-mobile 0;
         .dropdown {
             width: 100%;

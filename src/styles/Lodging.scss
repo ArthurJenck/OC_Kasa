@@ -48,7 +48,7 @@
             flex: 1;
         }
     }
-    @media all and (max-width: 768px) {
+    @media all and (max-width: $responsive-breakpoint) {
         margin: $header-footer-margin-mobile 0;
         .location-and-tags {
             margin: 1rem 0;
