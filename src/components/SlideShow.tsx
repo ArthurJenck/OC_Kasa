@@ -13,19 +13,17 @@ const SlideShow = ({ logement }: LodgingProps) => {
     const prevImg = () => {
         // La propriété picWidth équivaut à la taille du conteneur d'image visible, cela nous servira à actualiser la valeur du scroll selon la taille d'écran pour le responsive
         const picWidth = document.querySelector(".pic-viewer")!.clientWidth
-        switch (currentId) {
-            // Si l'image sélectionnée est la première de l'array pictures, le bouton prevImg doit amener à la dernière image de l'array
-            case 0:
-                document
-                    .querySelector(".pic-viewer")
-                    ?.scroll(picWidth * logement.pictures.length - 1, 213)
-                break
+
+        // Si l'image sélectionnée est la première de l'array pictures, le bouton prevImg doit amener à la dernière image de l'array
+        if (currentId === 0) {
+            document
+                .querySelector(".pic-viewer")
+                ?.scroll(picWidth * logement.pictures.length - 1, 213)
+        } else {
             // Sinon, on calcule le scroll à afficher en multipliant la largeur d'image affichée par l'index du tableau actuellement affiché. 1x = Passer à la 1ère image, 2x = passer à la 2ème, etc...
-            default:
-                document
-                    .querySelector(".pic-viewer")
-                    ?.scroll(picWidth * (currentId - 1), 213)
-                break
+            document
+                .querySelector(".pic-viewer")
+                ?.scroll(picWidth * (currentId - 1), 213)
         }
         // Et on met à jour le useState
         return currentId === 0
@@ -36,17 +34,14 @@ const SlideShow = ({ logement }: LodgingProps) => {
     const nextImg = () => {
         const picWidth = document.querySelector(".pic-viewer")!.clientWidth
 
-        switch (currentId) {
-            // Idem pour le bouton nextImg, si l'image sélectionnée est la toute dernière, il faut repasser à la première de l'array
-            case logement.pictures.length - 1:
-                document.querySelector(".pic-viewer")?.scroll(0, 213)
-                break
-            default:
-                // Sinon, on calcule le prochain scroll à atteindre
-                document
-                    .querySelector(".pic-viewer")
-                    ?.scroll(picWidth * (currentId + 1), 213)
-                break
+        // Idem pour le bouton nextImg, si l'image sélectionnée est la toute dernière, il faut repasser à la première de l'array
+        if (currentId === logement.pictures.length - 1) {
+            document.querySelector(".pic-viewer")?.scroll(0, 213)
+        } else {
+            // Sinon, on calcule le prochain scroll à atteindre à l'aide de picWidth
+            document
+                .querySelector(".pic-viewer")
+                ?.scroll(picWidth * (currentId + 1), 213)
         }
         return currentId === logement.pictures.length - 1
             ? setCurrentId(0)

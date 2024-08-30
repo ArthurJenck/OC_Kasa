@@ -4,11 +4,12 @@ import starIcon from "../assets/star-icon.svg"
 const Ratings = ({ rating }: { rating: string }) => {
     // On transforme le string rating en un tableau de booléens en adéquation avec le nombre d'étoiles à mettre
     const ratingArr = []
+    // Obligé de passer par ce procédé car impossible de mettre une boucle for dans le rendu de l'élément
     for (let i = 0; i < 5; i++) {
         if (i < parseInt(rating)) {
             ratingArr.push(true)
         } else {
-            // Quand toutes la note est atteinte, chaque rating suivant passe en false
+            // Quand la note est atteinte, chaque rating suivant passe en false
             ratingArr.push(false)
         }
     }
