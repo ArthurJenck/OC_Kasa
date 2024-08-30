@@ -23,7 +23,7 @@
         font-size: 18px;
         color: $black;
     }
-    @media all and (max-width: 768px) {
+    @media all and (max-width: $responsive-breakpoint) {
         padding: $error-gap-mobile 0;
         gap: $error-gap-mobile;
         h2 {

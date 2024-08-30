@@ -5,7 +5,7 @@ body {
     .home {
         margin: $header-footer-margin 0;
     }
-    @media all and (max-width: 768px) {
+    @media all and (max-width: $responsive-breakpoint) {
         padding: 1.25rem;
         .home {
             margin: $header-footer-margin-mobile 0;

@@ -16,14 +16,14 @@ footer {
             saturate(7500%) hue-rotate(70deg) brightness(99%) contrast(107%);
         margin-top: 4rem;
     }
-    p {
+    h2 {
         color: #fff;
         font-size: 1.5rem;
         font-weight: 500;
         margin: 2rem 0;
     }
-    @media all and (max-width: 768px) {
-        p {
+    @media all and (max-width: $responsive-breakpoint) {
+        h2 {
             font-size: 12px;
             max-width: 33%;
             text-align: center;

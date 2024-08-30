@@ -18,7 +18,7 @@ const Dropdown = ({ title, isList, textContent, listContent }) => {
                     setIsOpen(!isOpen)
                 }}
             >
-                {title} <img src={chevron} />
+                {title} <img src={chevron} alt="ouvrir le contenu déroulant" />
             </button>
             <div className="dropdown-content">
                 {isList ? (

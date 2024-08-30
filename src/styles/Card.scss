@@ -1,3 +1,5 @@
+@import "./main.scss";
+
 .card {
     aspect-ratio: 1/1;
     border-radius: 10px;
@@ -14,11 +16,8 @@
         font-size: 18px;
         color: #fff;
     }
-    @media all and (max-width: 930px) {
+    @media all and (max-width: $responsive-breakpoint-home) {
         aspect-ratio: 1.5;
         padding: 0.95rem 1.24rem;
-        h2 {
-            max-width: 60%;
-        }
     }
 }
