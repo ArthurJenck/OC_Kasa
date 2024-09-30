@@ -19,7 +19,8 @@ Utilisation de variables SCSS pour faciliter un changement de charte graphique p
 ### Dates du projet
 
 Apprentissage des cours liés au projet débuté le 18 juillet 2024  
-Projet pratique débuté le 8 août 2024
+Projet pratique débuté le 8 août 2024  
+Terminé le 30 août 2024.
 
 ### Auteur
 
